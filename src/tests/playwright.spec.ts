@@ -19,5 +19,5 @@ test.describe("Introduction page", () => {
 
 test.afterEach(async ({ page }, testInfo) => {
   await page.close();
-  console.log(`Scenario finished. Status: ${testInfo.status.toUpperCase()}`);
+  console.log(`Scenario: "${testInfo.title}" finished.Status: ${testInfo.status.toUpperCase()}`);
 });
