@@ -1,13 +1,13 @@
 {
   "name": "playwright-e2e-tests-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple test automation project created using playwright and typescript",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "npx playwright install && npx playwright test"
   },
   "keywords": [
-    "playwright"
+    "playwright","typescript"
   ],
   "author": "Burak Kaygusuz",
   "license": "MIT",
