@@ -1,24 +1,16 @@
 name: Playwright E2E Tests Example
 
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.20.0-focal
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-          cache: "npm"
-
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -26,5 +18,4 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      - run: npx playwright install --with-deps
       - run: npm test
