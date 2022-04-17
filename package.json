@@ -7,11 +7,12 @@
     "test": "npx playwright install && npx playwright test"
   },
   "keywords": [
-    "playwright","typescript"
+    "playwright",
+    "typescript"
   ],
   "author": "Burak Kaygusuz",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.20.0"
+    "@playwright/test": "^1.21.0"
   }
 }
